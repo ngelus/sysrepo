@@ -27,7 +27,7 @@ write-host "Erstelle gerade ${groupnumber} globale Gruppen..."
   $globalgroupname = New-ADGroup "${globalgroupinput}" -path "OU=Globale Gruppen, DC=${domainname}, dc=${domainprefix}" -GroupScope Global -GroupCategory Security 
 
   # füge noch benutzer hinzu
-  write-host "Geben Sie einen Gruppenmitglied an (username) "
+  $username = write-host "Geben Sie einen Gruppenmitglied an (username) "
   Add-ADGroupMember -Identity ${globalgroupname} -Member ${username}
 }
 
