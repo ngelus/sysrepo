@@ -1,7 +1,8 @@
 os: windows
+language: bash
 
 install:
   - PowerShell -Command 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
 
 script:
-  - Powershell -File agdlp/agdlp.ps1
+  - Powershell -File ./agdlp/agdlp.ps1
