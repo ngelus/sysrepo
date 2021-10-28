@@ -7,7 +7,7 @@ function CiscoDialApi {
   
   [string] $xmlbody = @"
   <CiscoIPPhoneExecute>
-    <ExecuteItem URL="Dial:${target}" />
+    <ExecuteItem URL='Dial:${target}' />
   </CiscoIPPhoneExecute>
   "@
   
